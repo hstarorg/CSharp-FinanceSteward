@@ -1,0 +1,64 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hstar.Framework", "..\CSharp-Framework\Hstar.Framework\Hstar.Framework.csproj", "{4287384D-4F41-4528-8C16-DC9EF33BE669}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hstar.FinanceSteward.WebUI", "Hstar.FinanceSteward.WebUI\Hstar.FinanceSteward.WebUI.csproj", "{C63D7E2D-4315-47FE-9B7C-462536E2D875}"
+	ProjectSection(ProjectDependencies) = postProject
+		{9E60EC98-2818-46FF-B4FD-B2E7D24A5EC2} = {9E60EC98-2818-46FF-B4FD-B2E7D24A5EC2}
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1-界面和业务", "1-界面和业务", "{3E637D7C-DB1D-4CA8-BD8D-37522545E4C5}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2-基础框架", "2-基础框架", "{87176C8D-E6CF-4904-BF17-9E1D838AB061}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hstar.FinanceSteward.BLL", "Hstar.FinanceSteward.BLL\Hstar.FinanceSteward.BLL.csproj", "{89D7E1B0-CCBA-49A1-BE15-E0A4F30E940E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hstar.FinanceSteward.Model", "Hstar.FinanceSteward.Model\Hstar.FinanceSteward.Model.csproj", "{47D575B8-3D05-4441-8496-87D374DF2899}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hstar.FinanceSteward.IBLL", "Hstar.FinanceSteward.IBLL\Hstar.FinanceSteward.IBLL.csproj", "{9E60EC98-2818-46FF-B4FD-B2E7D24A5EC2}"
+	ProjectSection(ProjectDependencies) = postProject
+		{4287384D-4F41-4528-8C16-DC9EF33BE669} = {4287384D-4F41-4528-8C16-DC9EF33BE669}
+		{47D575B8-3D05-4441-8496-87D374DF2899} = {47D575B8-3D05-4441-8496-87D374DF2899}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4287384D-4F41-4528-8C16-DC9EF33BE669}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4287384D-4F41-4528-8C16-DC9EF33BE669}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4287384D-4F41-4528-8C16-DC9EF33BE669}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4287384D-4F41-4528-8C16-DC9EF33BE669}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C63D7E2D-4315-47FE-9B7C-462536E2D875}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C63D7E2D-4315-47FE-9B7C-462536E2D875}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C63D7E2D-4315-47FE-9B7C-462536E2D875}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C63D7E2D-4315-47FE-9B7C-462536E2D875}.Release|Any CPU.Build.0 = Release|Any CPU
+		{89D7E1B0-CCBA-49A1-BE15-E0A4F30E940E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{89D7E1B0-CCBA-49A1-BE15-E0A4F30E940E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{89D7E1B0-CCBA-49A1-BE15-E0A4F30E940E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{89D7E1B0-CCBA-49A1-BE15-E0A4F30E940E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{47D575B8-3D05-4441-8496-87D374DF2899}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{47D575B8-3D05-4441-8496-87D374DF2899}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{47D575B8-3D05-4441-8496-87D374DF2899}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{47D575B8-3D05-4441-8496-87D374DF2899}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9E60EC98-2818-46FF-B4FD-B2E7D24A5EC2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9E60EC98-2818-46FF-B4FD-B2E7D24A5EC2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9E60EC98-2818-46FF-B4FD-B2E7D24A5EC2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9E60EC98-2818-46FF-B4FD-B2E7D24A5EC2}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{4287384D-4F41-4528-8C16-DC9EF33BE669} = {87176C8D-E6CF-4904-BF17-9E1D838AB061}
+		{C63D7E2D-4315-47FE-9B7C-462536E2D875} = {3E637D7C-DB1D-4CA8-BD8D-37522545E4C5}
+		{89D7E1B0-CCBA-49A1-BE15-E0A4F30E940E} = {3E637D7C-DB1D-4CA8-BD8D-37522545E4C5}
+		{47D575B8-3D05-4441-8496-87D374DF2899} = {3E637D7C-DB1D-4CA8-BD8D-37522545E4C5}
+		{9E60EC98-2818-46FF-B4FD-B2E7D24A5EC2} = {3E637D7C-DB1D-4CA8-BD8D-37522545E4C5}
+	EndGlobalSection
+EndGlobal

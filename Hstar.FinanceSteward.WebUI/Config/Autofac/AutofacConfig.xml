@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<autofac>
+  <components>
+    <component type="Hstar.FinanceSteward.BLL.HomeBll,Hstar.FinanceSteward.BLL" service="Hstar.FinanceSteward.IBLL.IHomeBll,Hstar.FinanceSteward.IBLL" />
+  </components>
+</autofac>

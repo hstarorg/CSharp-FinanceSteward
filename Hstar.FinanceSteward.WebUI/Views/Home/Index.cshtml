@@ -1,0 +1,112 @@
+﻿@model dynamic
+
+@{
+    ViewBag.Title = "主页 - 幻星财务管家";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@section HeadPartialSection{
+    <link href="~/Content/main/css/style.css" rel="stylesheet" />
+}
+@section FootPartialSection{
+    <script>
+        $(function () {
+            function setContainerHeight() {
+                var height = document.documentElement.clientHeight - 92;
+                document.getElementById('mainFrame').style.height = height + 'px';
+                $('.left-container').get(0).style.height = height + 'px';
+            }
+
+            setContainerHeight();
+            //设定iframe的高度
+            $(window).on('resize', function() {
+                setContainerHeight();
+                console.log($('#mainFrame').height());
+            });
+            
+            //注册左侧大菜单事件
+            $('.menu-one-title').on('click', function() {
+                var $self = $(this),
+                    $parent = $self.parent();
+                if ($parent.hasClass('close')) {
+                    $parent.siblings().addClass('close').end();
+                    $parent.removeClass('close');
+                    //调整选中项(触发点击事件)
+                    $self.next().find('li:eq(0)').trigger('click');
+                }
+                return false;
+            });
+            //注册左侧菜单点击事件
+            $('li', '.left-container').on('click', function () {
+                //移除其他选中样式
+                $('.active', '.left-container').removeClass('active');
+                $(this).addClass('active');
+            });
+        });
+    </script>
+}
+<div class="main-container" style="min-width: 1000px;width: 100%;">
+    <div class="top-container">
+        <div class="topleft">
+            <img src="~/Content/main/images/logo.png" title="系统首页" alt="" />
+        </div>
+        <ul class="nav">
+            <li><a href="" target="mainFrame" class="selected"><img src="~/Content/main/images/icon01.png" title="工作台" /><h2>工作台</h2></a></li>
+            <li><a href="" target="mainFrame"><img src="~/Content/main/images/icon02.png" title="模型管理" /><h2>模型管理</h2></a></li>
+            <li><a href="" target="mainFrame"><img src="~/Content/main/images/icon03.png" title="模块设计" /><h2>模块设计</h2></a></li>
+            <li><a href="" target="mainFrame"><img src="~/Content/main/images/icon04.png" title="常用工具" /><h2>常用工具</h2></a></li>
+            <li><a href="" target="mainFrame"><img src="~/Content/main/images/icon05.png" title="文件管理" /><h2>文件管理</h2></a></li>
+            <li><a href="" target="mainFrame"><img src="~/Content/main/images/icon06.png" title="系统设置" /><h2>系统设置</h2></a></li>
+        </ul>
+        <div class="topright">
+            <ul>
+                <li><span><img src="~/Content/main/images/help.png" title="帮助" /></span><a href="#">帮助</a></li>
+                <li><a href="#">关于</a></li>
+                <li>@Html.ActionLink("退出", "Login", "Home")</li>
+            </ul>
+            <div class="user">
+                <span>admin</span>
+                <i>消息</i>
+                <b>5</b>
+            </div>
+        </div>
+    </div>
+    <div class="left-container">
+        <div class="lefttop">
+            <span></span>工作台
+        </div>
+        <div class="menu-one">
+            <div class="menu-one-title"><span><img src="~/Content/main/images/leftico01.png" alt="" /></span>管理信息</div>
+            <ul class="menuson">
+                <li><cite></cite><a href="index.html" target="mainFrame">首页模版</a><i></i></li>
+                <li class="active"><cite></cite><a href="right.html" target="mainFrame">数据列表</a><i></i></li>
+                <li><cite></cite><a href="imgtable.html" target="mainFrame">图片数据表</a><i></i></li>
+                <li><cite></cite><a href="form.html" target="mainFrame">添加编辑</a><i></i></li>
+                <li><cite></cite><a href="imglist.html" target="mainFrame">图片列表</a><i></i></li>
+                <li><cite></cite><a href="imglist1.html" target="mainFrame">自定义</a><i></i></li>
+                <li><cite></cite><a href="tools.html" target="mainFrame">常用工具</a><i></i></li>
+                <li><cite></cite><a href="filelist.html" target="mainFrame">信息管理</a><i></i></li>
+                <li><cite></cite><a href="tab.html" target="mainFrame">Tab页</a><i></i></li>
+                <li><cite></cite><a href="error.html" target="mainFrame">404页面</a><i></i></li>
+            </ul>
+        </div>
+        <div class="menu-one close">
+            <div class="menu-one-title"><span><img src="~/Content/main/images/leftico02.png" alt="" /></span>管理信息</div>
+            <ul class="menuson">
+                <li><cite></cite><a href="index.html" target="mainFrame">首页模版</a><i></i></li>
+                <li><cite></cite><a href="right.html" target="mainFrame">数据列表</a><i></i></li>
+                <li><cite></cite><a href="imgtable.html" target="mainFrame">图片数据表</a><i></i></li>
+                <li><cite></cite><a href="form.html" target="mainFrame">添加编辑</a><i></i></li>
+                <li><cite></cite><a href="imglist.html" target="mainFrame">图片列表</a><i></i></li>
+                <li><cite></cite><a href="imglist1.html" target="mainFrame">自定义</a><i></i></li>
+                <li><cite></cite><a href="tools.html" target="mainFrame">常用工具</a><i></i></li>
+                <li><cite></cite><a href="filelist.html" target="mainFrame">信息管理</a><i></i></li>
+                <li><cite></cite><a href="tab.html" target="mainFrame">Tab页</a><i></i></li>
+                <li><cite></cite><a href="error.html" target="mainFrame">404页面</a><i></i></li>
+            </ul>
+        </div>
+    </div>
+    <div class="right-container">
+        <iframe src="~/Home/Welcome" name="mainFrame" id="mainFrame" scrolling="auto" scrolling-x="no" marginwidth="0" marginheight="0" width="100%" height="100%"></iframe>
+    </div>
+</div>
+
